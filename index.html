@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>[Nombre de la Propiedad] | Inversión de Élite</title>
+    <meta name="description" content="Descubre [Nombre de la Propiedad] a través de nuestra experiencia virtual 360°. Recorre cada espacio, visualiza su potencial y agenda tu visita real hoy mismo.">
+    
+    <!-- Open Graph para compartir en Redes/WhatsApp -->
+    <meta property="og:title" content="[Nombre de la Propiedad] | Visita Virtual Premium">
+    <meta property="og:description" content="Explora esta increíble propiedad desde tu dispositivo. Recorrido 360°, vistas previas de diseño y toda la información que necesitas.">
+    <meta property="og:image" content="[inserte url de foto og-image 1200x630]">
+    <meta property="og:url" content="[inserte url de la landing]">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            dark: '#0a0a0a',
+                            accent: '#C8A97E',   // Dorado elegante
+                            accentHover: '#b3946a',
+                            text: '#ffffff',
+                            muted: '#9ca3af'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #000000; color: #ffffff; }
+        .aspect-matterport { aspect-ratio: 16 / 9; }
+        .outline-box {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 1.5rem;
+            transition: border-color 0.3s ease;
+        }
+        .outline-box:hover {
+            border-color: #C8A97E;
+        }
+        /* Estilo de inputs dorados basado en la referencia */
+        .gold-input {
+            background-color: #C8A97E;
+            color: #000000;
+            border: none;
+        }
+        .gold-input::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-accent selection:text-black">
+
+    <!-- Navegación Minimalista -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-32 h-10 flex items-center text-xs text-brand-muted">
+                    <!-- Placeholder Logo Agencia -->
+                    [inserte url de foto logo agencia]
+                </div>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-light tracking-wide">
+                <a href="#recorrido" class="hover:text-brand-accent transition">View 360</a>
+                <a href="#potencial" class="hover:text-brand-accent transition">Planos y Diseño</a>
+                <a href="#detalles" class="hover:text-brand-accent transition">Detalles</a>
+            </div>
+            <a href="#contacto" class="border border-brand-accent text-brand-accent font-medium px-6 py-2 hover:bg-brand-accent hover:text-black transition flex items-center gap-2 text-sm">
+                Agendar Visita
+            </a>
+        </div>
+    </nav>
+
+    <!-- HÉROE: Estilo Split Screen oscuro -->
+    <header class="relative min-h-screen flex items-center pt-20 bg-brand-black overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="pr-8">
+                <h2 class="font-heading text-brand-accent text-lg md:text-xl font-light mb-2 tracking-wide">
+                    Experiencia Inmersiva Premium
+                </h2>
+                <h1 class="font-heading text-5xl md:text-7xl font-semibold leading-tight mb-6 text-white">
+                    [Nombre de la <br> Propiedad]
+                </h1>
+                <p class="text-lg text-brand-muted font-light leading-relaxed mb-10 max-w-lg">
+                    En un mercado inmobiliario en constante evolución, presentamos una oportunidad excepcional que combina rentabilidad, plusvalía y prestigio. Vive la experiencia antes de visitarla.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#recorrido" class="bg-brand-accent text-black text-center font-medium px-8 py-4 hover:bg-brand-accentHover transition">
+                        Explorar Portafolio
+                    </a>
+                </div>
+            </div>
+            <div class="relative h-[60vh] lg:h-[80vh] w-full hidden lg:block">
+                <!-- Imagen en escala de grises/oscura para mantener la estética -->
+                <img src="[inserte url de foto hero 1920x800]" alt="Fachada de la propiedad" class="w-full h-full object-cover grayscale-[30%] opacity-80 rounded-sm">
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTRODUCCIÓN Y BENEFICIOS (Estilo Wireframe Boxes) -->
+    <section class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-light mb-6">Versatilidad y Valor<br><span class="font-semibold">Excepcional</span></h2>
+                <p class="text-brand-muted font-light leading-relaxed">
+                    Nuestro portafolio digital ofrece múltiples herramientas adaptadas a sus objetivos. Ya sea que busque analizar las dimensiones exactas, visualizar el potencial arquitectónico o recorrer los espacios a su propio ritmo, esta experiencia inmersiva ofrece la flexibilidad que necesita.
+                </p>
+            </div>
+
+            <!-- Estructura de Cajas estilo Referencia -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-8">
+                    <h3 class="text-xl font-light text-brand-muted">Propiedades, con<br>características que<br>van desde</h3>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Box 1 -->
+                    <div class="outline-box p-8 flex items-center justify-center gap-3">
+                        <span class="text-4xl md:text-5xl font-light">24/7</span>
+                        <span class="text-xs text-brand-muted uppercase tracking-widest leading-tight">Acceso<br>Virtual</span>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="outline-box p-8 flex items-center justify-center gap-3">
+                        <span class="text-4xl md:text-5xl font-light">100%</span>
+                        <span class="text-xs text-brand-muted uppercase tracking-widest leading-tight">Precisión<br>Milimétrica</span>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="outline-box p-8 flex items-center justify-center gap-3">
+                        <span class="text-4xl md:text-5xl font-light">3D</span>
+                        <span class="text-xs text-brand-muted uppercase tracking-widest leading-tight">Gemelo<br>Digital</span>
+                    </div>
+                    <!-- Box 4 -->
+                    <div class="outline-box p-8 flex items-center justify-center gap-3">
+                        <span class="text-4xl md:text-5xl font-light">IA</span>
+                        <span class="text-xs text-brand-muted uppercase tracking-widest leading-tight">Vaciado<br>Virtual</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caja Amplia Horizontal -->
+            <div class="mt-12 outline-box p-8 md:p-12">
+                <p class="text-lg font-light mb-4 text-gray-300">El valor de esta experiencia tecnológica asciende a</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-5xl md:text-6xl font-semibold text-white">0</span>
+                    <span class="text-sm text-brand-muted uppercase tracking-widest leading-tight">Visitas<br>Decepcionantes</span>
+                    <div class="flex-grow border-b border-white/30 ml-4 relative">
+                        <div class="absolute right-0 top-[-4px] border-solid border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-6 border-l-white/30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN BLANCA: Demografía / Antes y Después -->
+    <section id="potencial" class="py-24 bg-white text-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-right mb-16">
+                <h3 class="font-heading text-xl font-light text-gray-500 mb-2">El potencial oculto de</h3>
+                <h2 class="font-heading text-3xl md:text-4xl font-semibold text-brand-accent">[Nombre de Propiedad]</h2>
+            </div>
+
+            <!-- Grid de Antes / Después -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Set 1 -->
+                <div>
+                    <h4 class="font-heading text-lg font-light mb-4 text-center">Estado Actual vs Diseño Virtual</h4>
+                    <div class="grid grid-cols-2 gap-1 h-64 md:h-96">
+                        <div class="relative bg-gray-200">
+                            <span class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-wider">Actual</span>
+                            <img src="[inserte url de foto antes 800x600]" alt="Antes" class="w-full h-full object-cover">
+                        </div>
+                        <div class="relative bg-gray-200">
+                            <span class="absolute bottom-4 right-4 bg-brand-accent text-white px-3 py-1 text-xs font-semibold uppercase tracking-wider">Proyección</span>
+                            <img src="[inserte url de foto despues 800x600]" alt="Después" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <!-- Set 2 -->
+                <div class="hidden md:block">
+                    <h4 class="font-heading text-lg font-light mb-4 text-center">Planos de Planta</h4>
+                    <div class="grid grid-cols-2 gap-1 h-64 md:h-96 bg-gray-50 p-4 border border-gray-200">
+                        <!-- Placeholder para imagen de planos como en tu referencia -->
+                        <div class="flex items-center justify-center text-gray-400 text-sm text-center">
+                            [inserte url de foto plano 1]
+                        </div>
+                        <div class="flex items-center justify-center text-gray-400 text-sm text-center">
+                            [inserte url de foto plano 2]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO DE PROPIEDAD -->
+    <section id="detalles" class="py-24 bg-brand-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-heading text-3xl font-light mb-12">Video de propiedad</h2>
+            <div class="w-full aspect-video bg-[#050505] relative border border-white/5">
+                <video 
+                    controls 
+                    poster="[inserte url de foto poster video]" 
+                    class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                    <source src="[inserte url de video mp4]" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIEW 360 (Matterport en Fondo Blanco) -->
+    <section id="recorrido" class="py-24 bg-white text-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="font-heading text-3xl font-light mb-12">View 360</h2>
+            
+            <div class="w-full aspect-matterport bg-gray-100 relative shadow-xl">
+                <!-- INSTRUCCIÓN DIRECTA: Embed Matterport -->
+                <div class="absolute inset-0 flex items-center justify-center text-gray-400 z-0">
+                    <p class="text-center font-light">
+                        [inserte url de matterport en el iframe aquí]
+                    </p>
+                </div>
+                <iframe 
+                    class="relative z-10 w-full h-full" 
+                    src="[inserte url de matterport]" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    allow="xr-spatial-tracking">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECCIÓN (Fondo Negro) -->
+    <section class="py-24 bg-brand-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-heading text-3xl font-light mb-12">Dirección</h2>
+            <p class="text-brand-muted font-light mb-8 max-w-2xl">
+                [inserte direccion completa de la propiedad]
+            </p>
+            <div class="w-full h-[400px] bg-[#050505] relative border border-white/5 opacity-80 hover:opacity-100 transition">
+                <!-- INSTRUCCIÓN DIRECTA: Embed Google Maps -->
+                <div class="absolute inset-0 flex items-center justify-center text-gray-600 z-0">
+                    <p class="text-center font-light">[inserte aqui ubicacion de google maps en coordenadas o iframe]</p>
+                </div>
+                <iframe 
+                    src="[inserte url de google maps embed]" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(80%) contrast(120%);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    class="relative z-10">
+                </iframe>
+                <!-- Nota: El filtro CSS en el iframe invierte los colores del mapa para que se vea oscuro (Dark Mode simulado) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION CENTRAL (Estilo Descargar PDF) -->
+    <section class="py-16 bg-white flex justify-center">
+        <a href="[inserte url de link whatsapp]" target="_blank" class="border-2 border-brand-accent text-brand-accent font-semibold text-lg px-12 py-4 hover:bg-brand-accent hover:text-white transition flex items-center gap-3">
+            <i data-lucide="message-circle" class="w-5 h-5"></i> Contactar por WhatsApp
+        </a>
+    </section>
+
+    <!-- CONTACTO FINAL (Diseño dorado) -->
+    <section id="contacto" class="py-24 bg-brand-dark">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
+            
+            <!-- Columna Izquierda: Formulario -->
+            <div>
+                <h2 class="font-heading text-3xl font-light mb-12">Contacto</h2>
+                <form action="[inserte url de leads endpoint]" method="POST" class="space-y-6">
+                    <input type="hidden" name="property" value="[Nombre de la Propiedad]">
+                    <input type="hidden" name="mailto" value="[inserte email de contacto]">
+                    
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-white mb-2">Nombre Completo *</label>
+                        <input type="text" name="name" required class="gold-input w-full p-4 focus:outline-none">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-white mb-2">Correo *</label>
+                        <input type="email" name="email" required class="gold-input w-full p-4 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-white mb-2">Teléfono</label>
+                        <input type="tel" name="phone" class="gold-input w-full p-4 focus:outline-none">
+                    </div>
+
+                    <button type="submit" class="bg-brand-accent text-black font-semibold uppercase tracking-widest text-sm px-10 py-4 hover:bg-white transition mt-4">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+
+            <!-- Columna Derecha: Branding y Logo -->
+            <div class="flex flex-col items-center justify-center h-full text-center space-y-8">
+                <!-- Logo Grande -->
+                <div class="w-48 h-32 border border-brand-accent/30 flex items-center justify-center text-brand-accent font-heading text-xl font-light p-4">
+                    [inserte url de foto logo agencia]
+                </div>
+                
+                <div class="space-y-4">
+                    <p class="text-white font-light text-lg">¿Tienes preguntas o deseas más información?</p>
+                    <p class="text-brand-muted font-light">Contáctanos y te responderemos a la brevedad.</p>
+                </div>
+
+                <!-- Detalles QR / 7Services -->
+                <div class="mt-8 pt-8 border-t border-white/10 flex flex-col items-center gap-4 w-full">
+                    <img src="[inserte url de foto QR]" alt="Código QR" class="w-24 h-24 bg-white p-2">
+                    <p class="text-xs text-brand-muted font-light">Escanea para guardar en tu móvil</p>
+                    
+                    <div class="mt-4 flex items-center gap-2 text-xs font-light text-gray-500">
+                        <span>Experiencia creada por</span>
+                        <span class="text-brand-accent font-semibold">7Services</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-brand-black py-8 text-center border-t border-white/5">
+        <p class="text-gray-600 text-xs font-light tracking-widest uppercase">&copy; <script>document.write(new Date().getFullYear())</script> Portafolio Inmobiliario. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Inicializar Iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
